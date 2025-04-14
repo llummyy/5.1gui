@@ -24,6 +24,13 @@ def GreenOn():
         yellowLed.off()
         redLed.off()
 myFont = tkFont.Font(family  = "helvetica", size = 12, weight = "bold")
+def closeApp():
+        yellowLed.off()
+        greenLed.off()
+        redLed.off()
+        root.destroy()
+exitButton = tk.Button(root, text="Exit", font=myFont, command=closeApp, bg="black", fg="white", width=25, height=2)
+exitButton.pack(pady=20)
 
 redButton = tk.Button(root, text = "Red Light", font = myFont, command = RedOn, bg = "red", fg = "white", width = 25, height = 2)
 GreenButton = tk.Button(root, text = "Green Light", font = myFont, command = GreenOn, bg = "green", fg = "white", width = 25, height = 2)
@@ -32,5 +39,3 @@ redButton.pack(pady=10)
 GreenButton.pack(pady=10)
 yellowButton.pack(pady=10)
 root.mainloop()
-
-
